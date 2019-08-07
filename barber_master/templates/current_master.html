@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Current master info</title>
+</head>
+<body>
+<a href="/barber_master"> The list of Masters</a>
+<a href="/barber_master/change_masters_info"> Change info about Master</a>
+<a href="/barber_master/set_time_for_haircut">Set time for haircutting</a>
+{% for elem in current_master %}
+    <p>Имя Мастера: {{ elem.masters_name }}</p>
+    <p>Город: {{ elem.city }}</p>
+    <p>Парикмахерская: {{ elem.barber_shop }}</p>
+    <p>Телефон: {{ elem.telephone_number}}</p>
+    <p>E-mail: {{ elem.email }}</p>
+    <p>Мужской мастер: {{ elem.man_master }}</p>
+    <p>Женский мастер: {{ elem.woman_master }}</p>
+    <p>Фото: <img src="{{ elem.your_photo }}" alt="masters_photo"/> </p>
+    {% endfor %}
+
+</body>
+</html>

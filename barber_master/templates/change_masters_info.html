@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Changing info about current master</title>
+</head>
+<body>
+
+<h1>Change info Master</h1>
+
+<form enctype="multipart/form-data" action="" method="post">
+    {% csrf_token %}
+    {{ form1.as_p }}
+    <input type = "submit" value = "Submit" />
+
+</form>
+</body>
+</html>
+

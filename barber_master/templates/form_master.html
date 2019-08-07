@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {{user.username}}
+<h1>Add Master</h1>
+
+
+<form enctype="multipart/form-data" action="/barber_master/add_master/" method="post">
+    {% csrf_token %}
+    {{ form_for_master.as_p }}
+    <input type = "submit" value = "Submit" />
+</form>
+</body>
+</html>

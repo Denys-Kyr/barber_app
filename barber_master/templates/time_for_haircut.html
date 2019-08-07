@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Time for haircut</title>
+</head>
+<body>
+    {{user.username}}
+<h1>Set time for haircut</h1>
+
+    <p>Set the approximate time for each hairstyle</p>
+
+<form  action="/barber_master/add_time_for_haircut/" method="post">
+    {% csrf_token %}
+    {% if  form_time_for_haircut_woman %}
+        <h4>Woman hairstyle</h4>
+        {{ form_time_for_haircut_woman.as_p }}
+    {%endif%}
+    {% if  form_time_for_haircut_man %}
+        <h4>Man hairstyle</h4>
+        {{ form_time_for_haircut_man.as_p }}
+    {% endif %}
+
+    <input type = "submit" value = "Submit" />
+</form>
+</body>
+</html>
